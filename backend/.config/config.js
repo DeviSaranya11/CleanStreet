@@ -14,7 +14,10 @@ const config = {
   PORT: process.env.PORT || 5000,
   JWT_USER_SECRET: process.env.JWT_USER_SECRET || process.env.JWT_SECRET || null,
   JWT_ADMIN_SECRET: process.env.JWT_ADMIN_SECRET || process.env.JWT_SECRET || null,
-  NODE_ENV : process.env.NODE_ENV || 'development'
+  NODE_ENV : process.env.NODE_ENV || 'development',
+  ALLOWED_ORIGINS: process.env.ALLOWED_ORIGINS
+    ? process.env.ALLOWED_ORIGINS.split(",")
+    : ["http://localhost:5173", "https://clean-street-hackathon.vercel.app"]
 };
 
 export default config;

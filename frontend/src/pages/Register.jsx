@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { FiUser, FiMail, FiMapPin, FiLock, FiBriefcase, FiEye, FiEyeOff } from "react-icons/fi";
 import { Toaster, toast } from "react-hot-toast";
 import { useTheme } from "../context/ThemeContext";
+import { backend_Url } from "../config";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -19,7 +20,6 @@ export default function Register() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const backend_Url = "http://localhost:3002";
   
 
   const handleChange = (e) => {

@@ -4,6 +4,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { FiUser, FiMail, FiMapPin, FiLock, FiCamera, FiEdit3, FiSave, FiShield, FiX, FiEye, FiEyeOff, FiLoader, FiCheckCircle, FiAlertCircle, FiUserCheck } from "react-icons/fi";
 import { useTheme } from "../context/ThemeContext";
+import { backend_Url } from "../config";
 
 const FormMessage = ({ type, message }) => {
     if (!message) return null;
@@ -15,7 +16,6 @@ const FormMessage = ({ type, message }) => {
         </div>
     );
 };
-const backend_Url = "http://localhost:3002";
 
 
 export default function Profilepage() {

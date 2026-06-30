@@ -10,6 +10,7 @@ import { FiArrowLeft, FiUpload, FiXCircle, FiMapPin, FiInfo, FiImage, FiLoader, 
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useTheme } from "../context/ThemeContext";
+import { backend_Url } from "../config";
 
 // Marker icon setup (Keep original)
 const markerIcon = new L.Icon({
@@ -55,7 +56,6 @@ const ReportIssue = () => {
   });
   const [loading, setLoading] = useState(false); //
   const [statusMessage, setStatusMessage] = useState({ type: '', text: '' }); // For success/error messages
-  const backend_Url = "http://localhost:3002";
   // --- Core Logic (Keep original logic, add preview handling) ---
   useEffect(() => {
     // Attempt to get user's current location

@@ -7,6 +7,7 @@ import ComplaintModal from "../Components/ComplaintModal";
 import { FaRegComment, FaSpinner, FaMapMarkerAlt, FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi"; // Added icon
 import { Link } from "react-router-dom"; // Added Link
+import { backend_Url } from "../config";
 
 const ViewComplaints = () => {
   const [complaints, setComplaints] = useState([]);
@@ -14,7 +15,6 @@ const ViewComplaints = () => {
   const [error, setError] = useState("");
   const [selectedComplaint, setSelectedComplaint] = useState(null);
   const [user, setUser] = useState(null);
-  const backend_Url = "http://localhost:3002";
   
 
   useEffect(() => {

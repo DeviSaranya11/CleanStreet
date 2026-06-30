@@ -5,6 +5,7 @@ import AdminStatistics from "../Components/AdminStatistics";
 import { useNavigate } from "react-router-dom";
 import { FiUsers, FiClipboard, FiAlertCircle, FiCheckCircle, FiEdit, FiSave, FiX, FiLoader, FiActivity, FiUserCheck, FiClock, FiDownload, FiFilter } from "react-icons/fi";
 import { Toaster, toast } from "react-hot-toast";
+import { backend_Url } from "../config";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -28,7 +29,6 @@ const AdminDashboard = () => {
   const [assignedToFilter, setAssignedToFilter] = useState("");
 
   const currentUser = JSON.parse(localStorage.getItem("user"));
-  const backend_Url = "http://localhost:3002";
   
 
   useEffect(() => {

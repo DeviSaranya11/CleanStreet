@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiTrendingUp, FiPieChart, FiBarChart2, FiActivity } from "react-icons/fi";
 import { toast } from "react-hot-toast";
+import { backend_Url } from "../config";
 
 const COLORS = {
   primary: ["#6366f1", "#8b5cf6", "#ec4899", "#f59e0b", "#10b981"],
@@ -20,7 +21,6 @@ const COLORS = {
 const AdminStatistics = () => {
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState(null);
-  const backend_Url = "http://localhost:3002";
   
   
   useEffect(() => {

@@ -19,6 +19,7 @@ import {
   FiActivity,
 } from "react-icons/fi";
 import { Toaster, toast } from "react-hot-toast";
+import { backend_Url } from "../config";
 
 const VolunteerDashboard = () => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const VolunteerDashboard = () => {
   const [activities, setActivities] = useState([]); // ✅ NEW STATE FOR ADMIN LOGS
 
   const user = JSON.parse(localStorage.getItem("user"));
-  const backendUrl = "http://localhost:3002";
+  const backendUrl = backend_Url;
 
   useEffect(() => {
     if (user?.role !== "volunteer") {

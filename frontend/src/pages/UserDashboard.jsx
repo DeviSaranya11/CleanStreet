@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import { FiActivity } from "react-icons/fi";
 import { Toaster, toast } from "react-hot-toast";
+import { backend_Url } from "../config";
 
 const UserDashboard = () => {
   const navigate = useNavigate();
@@ -33,7 +34,6 @@ const UserDashboard = () => {
   });
   const [loading, setLoading] = useState(true);
   const [activities, setActivities] = useState([]);
-  const backend_Url = "http://localhost:3002";
 
   const user = JSON.parse(localStorage.getItem("user"));
 

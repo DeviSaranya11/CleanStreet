@@ -6,6 +6,7 @@ import { FiX, FiMapPin, FiTag, FiAlertTriangle, FiCalendar, FiSend, FiThumbsUp, 
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import { backend_Url } from "../config";
 
 // Fix for default marker icon (Keep as is)
 const markerIcon = new L.Icon({
@@ -19,7 +20,6 @@ const markerIcon = new L.Icon({
 const ComplaintModal = ({ complaint, onClose, onCommentAdded }) => {
     // --- State Variables (Keep original logic) ---
     const [isOpen, setIsOpen] = useState(false);
-    const backend_Url = "http://localhost:3002";
     const [comments, setComments] = useState([]);
     const [commentCount, setCommentCount] = useState(complaint?.comments?.length || 0);
     const [newComment, setNewComment] = useState("");
