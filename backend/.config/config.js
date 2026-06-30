@@ -16,7 +16,7 @@ const config = {
   JWT_ADMIN_SECRET: process.env.JWT_ADMIN_SECRET || process.env.JWT_SECRET || null,
   NODE_ENV : process.env.NODE_ENV || 'development',
   ALLOWED_ORIGINS: process.env.ALLOWED_ORIGINS
-    ? process.env.ALLOWED_ORIGINS.split(",")
+    ? process.env.ALLOWED_ORIGINS.split(",").map(o => o.trim())
     : ["http://localhost:5173", "https://clean-street-hackathon.vercel.app"]
 };
 

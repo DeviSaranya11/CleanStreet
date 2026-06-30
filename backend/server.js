@@ -46,6 +46,7 @@ if (!config.MONGO_URL) {
 mongoose.connect(config.MONGO_URL)
   .then(() => {
     console.log("✅ MongoDB Connected");
+    console.log("🔒 CORS Allowed Origins:", config.ALLOWED_ORIGINS);
     app.listen(config.PORT, () => {
       console.log(`🚀 Server running on http://localhost:${config.PORT}`);
     });
